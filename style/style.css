@@ -171,9 +171,6 @@ margin-bottom: 20px;
 
 /******* second section ********/
 
-#accomodation {
-    flex-wrap: wrap-reverse;
-}
 .accomodation-city, .accomodation-city__popular {
     padding: 20px;
 }
@@ -287,6 +284,7 @@ margin-bottom: 20px;
 .entertainment-city .d-flex {
     width: 23%;
 }
+
 .entertainment-city .d-flex .card {
     width: 100%;
     height: 45%;
@@ -445,13 +443,13 @@ button {
 }
 
 .portrait {
-    width: 20%;
+    width: 100%;
     height: 100%;
 }
 
 .landscape {
-    width: 20%;
-    height: 40%;
+    width: 100%;
+    height: 45%;
 }
 
 /******* responsive design ********/
@@ -461,6 +459,15 @@ button {
 
     /* header */
 
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .padding-container {
+        padding: 20px;
+    }
     header {
         justify-content: center;
         align-items: center;
@@ -501,5 +508,16 @@ button {
     .accomodation-city__popular {
         width: 100%;
     }
+
+    .accomodation-city__popular .location-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .accomodation-city__popular .location {
+        width: 40%;
+    } 
+
+    /* thrid section */
     
 }
