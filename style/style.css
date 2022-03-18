@@ -74,7 +74,7 @@ header {
 
 .navbar ul li .bar {
     position: absolute;
-    margin-top: -120px;
+    margin-top: -66px;
 }
 
 /* for all sections */
@@ -85,32 +85,37 @@ section {
 
 /*first-section -- search bar */
 
+#filter {
+    margin-top: 20px;
+}
 #filter .card {
     position: relative;
-    height: 70px;
-    width: fit-content;
+    height: 55px;
+    width: 700px;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin: 30px 0;
 }
 
-#filter .card i {
+#filter .search i {
     left: 0;
     border-radius: 20px 0 0 20px;
     width: 50px;
     height: 100%;
-    background-color: #d8d8d8;
+    background-color: #f0f0f0;
 }
 
-#filter .card input {
+#filter .search input {
     height: 100%;
+    width: 250px;
     padding-left: 20px;
-    border: 1px solid #d8d8d8;
+    border: 1px solid #f0F0F0;
 }
 
-#filter .card button {
+#filter .search button {
     position: absolute;
     border-radius: 0 20px 20px 0;
     height: 100%;
+    width: 120px;
 }
 
 /* first section -- filtering section */
@@ -158,16 +163,16 @@ margin-bottom: 20px;
 }
 
 .info i {
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
     border: 1px solid #d8d8d8;
 }
 
 /******* second section ********/
 
 #accomodation {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
 }
 .accomodation-city, .accomodation-city__popular {
     padding: 20px;
@@ -202,6 +207,14 @@ margin-bottom: 20px;
     margin: 15px 0 15px 0;
 }
 
+.location-info {
+    margin-left: 20px;
+}
+
+.location-info i {
+    font-size: 12px;
+}
+
 .accomodation-city .location-cards {
     height: fit-content;
 }
@@ -219,17 +232,6 @@ margin-bottom: 20px;
     margin-bottom: 30px;
 }
 
-.accomodation-city__popular .location:not(:last-child) {
-    margin-bottom: 30px;
-}
-
-.location-info {
-    margin-left: 10px;
-}
-
-.accomodation-city__popular .location-info p {
-    margin-bottom: 40px;
-}
 
 .accomodation-city .box-image {
     height: 115px;
@@ -237,8 +239,26 @@ margin-bottom: 20px;
     background-position: 0% 50%;
 }
 
+.accomodation-city__popular .location:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.accomodation-city__popular .location-info {
+    margin: 10px 0 0 20px;
+    width: 50%;
+    right: 0;
+}
+
+.accomodation-city__popular h2 {
+    font-size: 18px;
+}
+
+.accomodation-city__popular .location-info p {
+    margin-bottom: 30px;
+}
+
 .accomodation-city__popular .box-image {
-    width: 100px;
+    width: 115px;
     border-radius: 15px 0 0 15px;
     background-position: 50% 0;
 }
@@ -296,7 +316,7 @@ footer {
     text-align:left;
 }
 
-.footer-info {
+.footer-details {
     margin-top: 30px;
     width: 80%;
 }
@@ -305,8 +325,9 @@ footer {
     margin-bottom: 15px;
 }
 
-.footer ul {
+footer ul {
     margin-left: 0;
+    padding: 0;
 }
 
 /******** utilities ********/ 
@@ -338,13 +359,18 @@ footer {
 }
 
 h1 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
 }
 
 p{
