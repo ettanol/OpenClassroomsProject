@@ -41,10 +41,15 @@ body {
     align-items: center;
     font-family: 'Raleway', arial, sans-serif;
     color: #111;
+    overflow-x: hidden;
 }
 
 .container {
     padding: 50px;
+}
+
+.card a {
+    display: inline-block;
 }
 
 /* header */
@@ -62,22 +67,19 @@ header {
 .navbar ul {
     font-weight: 500;
     min-width: 320px;
-    /* align-items: center; */
-    justify-content: center;
-    padding:  0 20px;
 }
 
 .navbar ul li {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     position: relative;
-    width: 300px;
+    width: 100%;
 }
 
 .navbar ul li .bar {
     position: absolute;
-    margin-top: -66px;
+    margin-top: -155px;
 }
 
 /* for all sections */
@@ -91,10 +93,12 @@ section {
 #filter {
     margin-top: 20px;
 }
-#filter .card {
+
+#filter .search {
     position: relative;
     height: 55px;
-    width: 700px;
+    width: 85%;
+    max-width: 500px;
     border-radius: 20px;
     margin: 30px 0;
 }
@@ -104,21 +108,33 @@ section {
     border-radius: 20px 0 0 20px;
     width: 50px;
     height: 100%;
-    background-color: #f0f0f0;
+    background-color: #F2F2F2;
+}
+
+#filter .search form {
+    position: absolute;
+    left: 50px;
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
 }
 
 #filter .search input {
     height: 100%;
-    width: 250px;
+    width: 75%;
     padding-left: 20px;
-    border: 1px solid #f0F0F0;
+    border: 1px solid #F2F2F2;
+
 }
 
 #filter .search button {
     position: absolute;
+    right: 0;
     border-radius: 0 20px 20px 0;
     height: 100%;
     width: 120px;
+    font-weight: 600;
+    font-size: 17px;
 }
 
 #filter .desktop-tablet {
@@ -147,6 +163,9 @@ section {
     margin-bottom: 20px;
 }
 
+.filter-container-title {
+    margin-bottom: 20px;
+}
 
 #filterContainer i {
     width: 50px;
@@ -167,6 +186,8 @@ section {
     flex-wrap: wrap;
 }
 
+/* animations */
+
 .filter-btn {
     transform: scale(1);
     background-color: trasparent;
@@ -178,6 +199,8 @@ section {
     background-color: #DEEBFF;
     color: #0065FC;
 }
+
+
 
 /* first section -- info disclaimer */
 
@@ -227,11 +250,16 @@ margin-bottom: 20px;
     margin: 15px 0 15px 0;
 }
 
+.location-cards a{
+    display: flex;
+    width: 100%;
+}
+
 .location-info {
     margin-left: 20px;
 }
 
-.location-info i {
+.location-info i {     /* rating-stars */
     font-size: 12px;
 }
 
@@ -244,6 +272,7 @@ margin-bottom: 20px;
     border: none;
     font-size: 16px;
     font-weight: 600;
+    margin-left: 50px;
 }
 
 .accomodation-city .location {
@@ -267,10 +296,6 @@ margin-bottom: 20px;
     margin: 10px 0 0 20px;
     width: 50%;
     right: 0;
-}
-
-.accomodation-city__popular h2 {
-    font-size: 18px;
 }
 
 .accomodation-city__popular .location-info p {
@@ -308,6 +333,7 @@ margin-bottom: 20px;
     width: 49%;
     justify-content: space-between;
     margin-bottom: 30px;
+    /* flex-wrap: wrap; */
 }
 
 .landmarks-city .three-items-block .card {
@@ -516,6 +542,7 @@ button {
     .padding-container {
         padding: 20px;
     }
+
     header {
         justify-content: center;
         align-items: center;
@@ -542,10 +569,6 @@ button {
         margin-bottom: 0px;
     }
 
-    .desktop-tablet {
-        display: block;
-    }
-
     .mobile {
         display: none;
     }
@@ -563,16 +586,27 @@ button {
 
     .accomodation-city__popular {
         width: 100%;
+        align-items: center;
     }
 
     .accomodation-city__popular .location-cards {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: fit-content;
+        width: 100%;
+        max-width: 400px;
     }
     .accomodation-city__popular .location {
-        width: 40%;
+        width: 100%;
+        height: 200px;
     } 
+
+    .accomodation-city__popular .box-image {
+        height: 100%;
+        width: 50%;
+    }
 
     /* thrid section */
     
@@ -611,7 +645,6 @@ button {
 
     #filter .search {
         margin: 20px auto;
-        border: 1px solid red;
         left: 20px;
     }
 
@@ -642,5 +675,31 @@ button {
 
     .accomodation-city {
         background-color: #fff;
+    }
+
+    .landmarks-city {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landmarks-city .three-items-block {
+        width: 80%;
+        justify-content: center;
+        
+        border: 1px solid red;
+    }
+
+    .landmarks-city .card {
+        width: 100%;
+    }
+    
+    .landmarks-city .card .landscape {
+        height: 100%;
+        width: 100%;
+        border: 1px solid blue;
+    }
+    
+    .landmarks-city .card:not(:last-child) {
+        margin-bottom: 30px;
     }
 }
