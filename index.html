@@ -37,27 +37,27 @@
                 <i class="fa-solid fa-location-dot X-centered Y-centered"></i>
                 <form action="#">
                     <label for="city"></label>
-                    <input type="search" placeholder="Ville..." name="search">
+                    <input type="search" placeholder="Ville..." name="search" id="city">
                     <button type="submit" class="bg-primary f-white">Rechercher</button>
                 </form>
             </div>
 
             <!-- same search bar but for mobile -->
-            <div class="search card d-flex mobile">
+            <!-- <div class="search card d-flex mobile">
                 <i class="fa-solid fa-location-dot X-centered Y-centered"></i>
                 <form action="#">
                     <label for="city"></label>
-                    <input type="text" placeholder="Ville..." name="search">
+                    <input type="text" placeholder="Ville..." name="search" id="city">
                     <i class="fa-solid fa-magnifying-glass highlighted bg-discreet X-centered Y-centered"></i>
                 </form>
-            </div>
+            </div> -->
             <div class="d-flex" id="filterContainer">
-                <p><h2 class="filter-container-title">Filtres</h2></p>
+                <h2 class="filter-container-title">Filtres</h2>
                 <div id="filter-buttons" class="d-flex">
-                    <button class="filter-btn active d-flex bg-transparent" onclick="filterSelection('price')"><i class="fa-solid fa-money-bill-1-wave bg-secondary highlighted X-centered Y-centered"></i><h2 >Economique</h2></button>
-                    <button class="filter-btn d-flex bg-transparent" onclick="filterSelection('family')"><i class="fa-solid fa-person bg-secondary highlighted X-centered Y-centered"></i><h2>Familial</h2></button>
-                    <button class="filter-btn d-flex bg-transparent" onclick="filterSelection('romantic')"><i class="fa-solid fa-heart bg-secondary highlighted X-centered Y-centered"></i><h2>Romantique</h2></button>
-                    <button class="filter-btn d-flex bg-transparent" onclick="filterSelection('animals')"><i class="fa-solid fa-dog bg-secondary highlighted X-centered Y-centered"></i><h2>Animaux autorisés</h2></button>
+                    <button class="filter-btn active d-flex bg-transparent" onclick="filterSelection('price')"><i class="fa-solid fa-money-bill-1-wave bg-secondary highlighted X-centered Y-centered"></i><span>Economique</span></button>
+                    <button class="filter-btn d-flex bg-transparent" onclick="filterSelection('family')"><i class="fa-solid fa-person bg-secondary highlighted X-centered Y-centered"></i><span>Familial</span></button>
+                    <button class="filter-btn d-flex bg-transparent" onclick="filterSelection('romantic')"><i class="fa-solid fa-heart bg-secondary highlighted X-centered Y-centered"></i><span>Romantique</span></button>
+                    <button class="filter-btn d-flex bg-transparent" onclick="filterSelection('animals')"><i class="fa-solid fa-dog bg-secondary highlighted X-centered Y-centered"></i><span>Animaux autorisés</span></button>
                 </div>
             </div>
             <div class="info d-flex">
@@ -72,7 +72,7 @@
                 <h1 class="card-info">Hébergements à Marseille</h1>
                 <div class="location-cards d-flex">
                     <div class="location card shadow bg-white">
-                        <div class="box-image" style="background-image: url('./images/hebergements/3_medium/Marseille_la-cannebiere.jpg');background-position: 0% 55%;"></div>
+                        <div class="box-image" style="background-image: url('./images/hebergements/4_small/Marseille_la-cannebiere.jpg');background-position: 0% 55%;"></div>
                         <div class="location-info d-flex column">
                             <h2 class="hotel-name">Auberge La Cannebière</h2>
                             <p class="hotel-info">Nuit à partir de 25€</p>
@@ -87,7 +87,7 @@
                     </div>
                     
                     <div class="location card shadow bg-white">
-                        <div class="box-image" style="background-image: url('./images/hebergements/3_medium/Marseille_hotel-du-port.jpg')"></div>
+                        <div class="box-image" style="background-image: url('./images/hebergements/4_small/Marseille_hotel-du-port.jpg')"></div>
                         <div class="location-info d-flex column">
                             <h2 class="hotel-name">Hôtel du port</h2>
                             <p class="hotel-info">Nuit à partir de 52€</p>
@@ -102,7 +102,7 @@
                     </div>
                     
                     <div class="location card shadow bg-white">
-                        <div class="box-image" style="background-image: url('./images/hebergements/3_medium/Marseille_les-moeuttes.jpg')"></div>
+                        <div class="box-image" style="background-image: url('./images/hebergements/4_small/Marseille_les-mouettes.jpg')"></div>
                         <div class="location-info d-flex column">
                             <h2 class="hotel-name">Hôtel Les mouettes</h2>
                             <p class="hotel-info">Nuit à partir de 76€</p>
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <div class="location card shadow bg-white">
-                        <div class="box-image" style="background-image: url('./images/hebergements/3_medium/Marseille_hotle-de-la-mer.jpg')"></div>
+                        <div class="box-image" style="background-image: url('./images/hebergements/4_small/Marseille_hotel-de-la-mer.jpg')"></div>
                         <div class="location-info d-flex column">
                             <h2 class="hotel-name">Hôtel de la mer</h2>
                             <p class="hotel-info">Nuit à partir de 46€</p>
@@ -130,7 +130,7 @@
                         </div>
                     </div>
                     <div class="location card shadow bg-white">
-                        <div class="box-image" style="background-image: url('./images/hebergements/3_medium/Marsielle_la-panier.jpg')"></div>
+                        <div class="box-image" style="background-image: url('./images/hebergements/4_small/Marseille_le-panier.jpg')"></div>
                         <div class="location-info d-flex column">
                             <h2 class="hotel-name">Auberge Le Panier</h2>
                             <p class="hotel-info">Nuit à partir de 23€</p>
@@ -144,7 +144,7 @@
                         </div>
                     </div>
                     <div class="location card shadow bg-white">
-                        <div class="box-image" style="background-image: url('./images/hebergements/3_medium/Marseille_chez-amina.jpg')"></div>
+                        <div class="box-image" style="background-image: url('./images/hebergements/4_small/Marseille_che-amina.jpg')"></div>
                         <div class="location-info d-flex column">
                             <h2 class="hotel-name">Hôtel chez Amina</h2>
                             <p class="hotel-info">Nuit à partir de 96€</p>
@@ -158,18 +158,18 @@
                         </div>
                     </div>
                 </div>
-                <button class="expand-button"><a href="#">Afficher plus</a></button>
+                <a href="#"><button class="expand-button"><span>Afficher plus</span></button></a>
             </div>
 
             <!--  aside with popular demands -->
             <aside class="accomodation-city__popular d-flex column card bg-discreet">
                 <div class="d-flex">
-                    <h1>Les plus populaires</h1>
+                    <span>Les plus populaires</span>
                     <i class="fa-solid fa-chart-line-up"></i>
                 </div> 
                 <div class="location-cards d-flex column X-centered">
                     <div class="location card shadow d-flex bg-white">
-                        <div class="box-image" style="background-image: url('./images/hebergements/3_medium/Marseille_le-soleil-du-matin.jpg')"></div>
+                        <div class="box-image" style="background-image: url('./images/hebergements/4_small/Marseille_le-soleil-du-matin.jpg')"></div>
                         <div class="location-info d-flex column">
                             <h2 class="hotel-name">Hôtel Le soleil du matin</h2>
                             <p class="hotel-info">Nuit à partir de 128€</p>
@@ -183,7 +183,7 @@
                         </div>
                     </div>
                     <div class="location card shadow d-flex bg-white">
-                        <div class="box-image" style="background-image: url('./images/hebergements/3_medium/Marseille_au-coeur-de-leau.jpg')"></div>
+                        <div class="box-image" style="background-image: url('./images/hebergements/4_small/Marseille_au-coeur-de-leau.jpg')"></div>
                         <div class="location-info d-flex column">
                             <h2 class="hotel-name">Au coeur de l'eau Chambres d'hôtes</h2>
                             <p class="hotel-info">Nuit à partir de 71€</p>
@@ -197,7 +197,7 @@
                         </div>
                     </div>
                     <div class="location card shadow d-flex bg-white">
-                        <div class="box-image" style="background-image: url('./images/hebergements/3_medium/Marseille_tout-blanc-et-bleu.jpg');     background-position: 50% 40%;"></div>
+                        <div class="box-image" style="background-image: url('./images/hebergements/4_small/Marsielle_tout-blanc-et-bleu.jpg');     background-position: 50% 40%;"></div>
                         <div class="location-info d-flex column">
                             <h2 class="hotel-name">Hôtel Tout bleu et Blanc</h2>
                             <p class="hotel-info">Nuit à partir de 68€</p>

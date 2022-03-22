@@ -184,6 +184,12 @@ section {
     flex-wrap: wrap;
 }
 
+.filter-btn span{
+    padding-left: 40px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
 /* animations */
 
 .filter-btn {
@@ -283,6 +289,11 @@ margin-bottom: 20px;
     height: 115px;
     border-radius: 15px 15px 0 0;
     background-position: 0% 50%;
+}
+
+.accomodation-city__popular span {
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .accomodation-city__popular .location:not(:last-child) {
@@ -733,6 +744,10 @@ button {
         flex-direction: column;
         text-align: left;
         align-items: baseline;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
     }
 
     .footer-title {
