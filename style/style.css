@@ -48,10 +48,6 @@ body {
     padding: 50px;
 }
 
-.card a {
-    display: inline-block;
-}
-
 /* header */
 
 header {
@@ -99,6 +95,7 @@ section {
     height: 55px;
     width: 85%;
     max-width: 500px;
+    min-width: 300px;
     border-radius: 20px;
     margin: 30px 0;
 }
@@ -137,8 +134,10 @@ section {
     font-size: 17px;
 }
 
+/* make the search bar appear or disappear dipending on the media screen */
+
 #filter .desktop-tablet {
-    display: inline-block;
+    display: flex;
 }
 
 #filter .mobile {
@@ -158,9 +157,8 @@ section {
     width: fit-content;
     padding: 20px;
     height: 50px;
-    margin-left: 20px;
+    margin: 0 0 20px 20px;
     border: 2px solid #d8d8d8;
-    margin-bottom: 20px;
 }
 
 .filter-container-title {
@@ -190,12 +188,12 @@ section {
 
 .filter-btn {
     transform: scale(1);
-    background-color: trasparent;
+    background-color: transparent;
     transition: transform 200ms, background-color 250ms;
 }
 
 .filter-btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* to be changed when a tags are added */
     background-color: #DEEBFF;
     color: #0065FC;
 }
@@ -236,7 +234,6 @@ margin-bottom: 20px;
 }
 
 .box-image {
-    position: relative;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -249,11 +246,11 @@ margin-bottom: 20px;
     justify-content: space-evenly;
     margin: 15px 0 15px 0;
 }
-
+/* 
 .location-cards a{
     display: flex;
     width: 100%;
-}
+} */
 
 .location-info {
     margin-left: 20px;
@@ -322,11 +319,11 @@ margin-bottom: 20px;
 }
 
 .landmarks-city .card{
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        width: 49%;
-        height: 450px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    height: 450px;
 }
 
 .landmarks-city .three-items-block{
@@ -447,7 +444,8 @@ a{
 }
 
 a:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
+    transform: translateY(-10%);
 }
 
 /* colors */
@@ -582,6 +580,14 @@ button {
     .accomodation-city {
         width: 100%;
         margin-bottom: 30px;
+        margin-right: 0px;
+        align-items: center;
+    }
+    
+    .accomodation-city .location-cards {
+        width: 100%;
+        min-width: 320px;
+        justify-content: space-evenly;
     }
 
     .accomodation-city__popular {
@@ -597,6 +603,7 @@ button {
         height: fit-content;
         width: 100%;
         max-width: 400px;
+        min-width: 320px;
     }
     .accomodation-city__popular .location {
         width: 100%;
@@ -626,6 +633,7 @@ button {
     h1, h2, h3, p, .hotel-rating  {
         text-align: center;
     }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -639,6 +647,7 @@ button {
         width: 100vw;
     }
 
+    /* first section */
     #filter {
         align-items: center;
     }
@@ -653,7 +662,7 @@ button {
     }
 
     .mobile {
-        display: block;
+        display: flex;
     }
 
     #filterContainer {
@@ -669,6 +678,8 @@ button {
         padding: 20px;
     }
 
+    /* second section */
+
     .accomodation-city__popular, .accomodation-city {
         border-radius: 0;
     }
@@ -676,6 +687,14 @@ button {
     .accomodation-city {
         background-color: #fff;
     }
+  
+    .accomodation-city .location {
+        width: 100%;
+        max-width: 400px;
+        height: 200px;
+    }
+
+    /* third section */
 
     .landmarks-city {
         flex-direction: column;
@@ -684,13 +703,14 @@ button {
 
     .landmarks-city .three-items-block {
         width: 100%;
+        max-width: 600px;
         flex-wrap: wrap;
         margin-bottom: 30px;
     }
 
     .landmarks-city .three-items-block .card {
         width: 100%;
-        height: 250px;
+        height: 200px;
         margin-right: 0px;
     }
 
@@ -700,5 +720,28 @@ button {
 
     .landmarks-city .two-items-block {
         width: 100%;
+    }
+
+    /* footer */
+
+    footer {
+        height: fit-content;
+    }
+
+    .footer-details {
+        margin-left: 30px;
+        flex-direction: column;
+        text-align: left;
+        align-items: baseline;
+    }
+
+    .footer-title {
+        margin-left: 0;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    footer ul {
+        margin-top: 0;
     }
 }

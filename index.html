@@ -33,7 +33,7 @@
         <section id="filter" class="d-flex column">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>
-            <div class="search card d-flex">
+            <div class="search card d-flex desktop-tablet">
                 <i class="fa-solid fa-location-dot X-centered Y-centered"></i>
                 <form action="#">
                     <label for="city"></label>
@@ -41,14 +41,16 @@
                     <button type="submit" class="bg-primary f-white">Rechercher</button>
                 </form>
             </div>
-            <!-- <div class="search card d-flex mobile">
+
+            <!-- same search bar but for mobile -->
+            <div class="search card d-flex mobile">
                 <i class="fa-solid fa-location-dot X-centered Y-centered"></i>
                 <form action="#">
                     <label for="city"></label>
                     <input type="text" placeholder="Ville..." name="search">
                     <i class="fa-solid fa-magnifying-glass highlighted bg-discreet X-centered Y-centered"></i>
                 </form>
-            </div> -->
+            </div>
             <div class="d-flex" id="filterContainer">
                 <p><h2 class="filter-container-title">Filtres</h2></p>
                 <div id="filter-buttons" class="d-flex">
@@ -218,7 +220,7 @@
             <div class="landmarks-city d-flex space-between">
                 <div class="three-items-block d-flex">
                     <div class="card shadow bg-white">
-                        <div class="box-image" style="background-image: url(./images/activites/4_small/Marseille_vieux-port.jpg); background-position: 30% 0%;">
+                        <div class="box-image" style="background-image: url(./images/activites/3_medium/Marseille_vieux-port.jpg); background-position: 30% 50%;">
                         </div>
                         <div class="box-text Y-centered">
                             <h2 class="location-info">Vieux Port</h2>
@@ -226,14 +228,14 @@
                     </div>
                     <div class="two-items-block d-flex column">
                         <div class="card landscape shadow bg-white">
-                            <div class="box-image " style="background-image: url(./images/activites/4_small/Marseille_fort-de-Pomègues.jpg);">
+                            <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_fort-de-Pomègues.jpg);">
                             </div>
                             <div class="box-text Y-centered">
                                 <h2 class="location-info">Fort De Pomègues</h2>
                             </div>
                         </div>
                         <div class="card landscape shadow bg-white">
-                            <div class="box-image " style="background-image: url(./images/activites/4_small/Marseille_iles_du_frioul.jpg);">
+                            <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_iles_du_frioul.jpg);">
                             </div>
                             <div class="box-text Y-centered">
                                 <h2 class="location-info">Iles du Frioul</h2>
@@ -243,7 +245,7 @@
                 </div>
                 <div class="three-items-block d-flex">
                     <div class="card shadow bg-white">
-                        <div class="box-image " style="background-image: url(./images/activites/4_small/Marseille_calanques.jpg)">
+                        <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_calanques.jpg)">
                         </div>
                         <div class="box-text Y-centered">
                             <h2 class="location-info">Parc national des Calanques</h2>
@@ -251,14 +253,14 @@
                     </div>
                     <div class="two-items-block d-flex column">
                         <div class="card landscape shadow bg-white">
-                            <div class="box-image " style="background-image: url(./images/activites/4_small/Marseille_notre-dame-de-la-garde.jpg);">
+                            <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_Notre-dame-de-la-garde.jpg);">
                             </div>
                             <div class="box-text Y-centered">
                                 <h2 class="location-info">Notre-Dame-de-la-Garde</h2>
                             </div>
                         </div>
                         <div class="card landscape shadow bg-white">
-                            <div class="box-image " style="background-image: url(./images/activites/4_small/Marseille_parc_longchamp.jpg);">
+                            <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_parc_longchamp.jpg);">
                             </div>
                             <div class="box-text Y-centered">
                                 <h2 class="location-info">Parc Longchamp</h2>
@@ -276,7 +278,7 @@
             <div class="footer-section d-flex column">
                 <h2 class="footer-title">A propos</h2>
                 <ul>
-                    <li><a href="#">Fonctionnment du site</a></li>
+                    <li><a href="#">Fonctionnement du site</a></li>
                     <li><a href="#">Conditions générales de vente</a></li>
                     <li><a href="#">Données et confidentialité</a></li>
                 </ul>
