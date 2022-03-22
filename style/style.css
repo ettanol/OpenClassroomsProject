@@ -134,6 +134,8 @@ section {
     font-size: 17px;
 }
 
+/* make the search bar appear or disappear dipending on the media screen */
+
 #filter .desktop-tablet {
     display: flex;
 }
@@ -155,9 +157,8 @@ section {
     width: fit-content;
     padding: 20px;
     height: 50px;
-    margin-left: 20px;
+    margin: 0 0 20px 20px;
     border: 2px solid #d8d8d8;
-    margin-bottom: 20px;
 }
 
 .filter-container-title {
@@ -187,7 +188,7 @@ section {
 
 .filter-btn {
     transform: scale(1);
-    background-color: trasparent;
+    background-color: transparent;
     transition: transform 200ms, background-color 250ms;
 }
 
@@ -233,7 +234,6 @@ margin-bottom: 20px;
 }
 
 .box-image {
-    position: relative;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -319,11 +319,11 @@ margin-bottom: 20px;
 }
 
 .landmarks-city .card{
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        width: 49%;
-        height: 450px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    height: 450px;
 }
 
 .landmarks-city .three-items-block{
@@ -633,6 +633,7 @@ button {
     h1, h2, h3, p, .hotel-rating  {
         text-align: center;
     }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -646,6 +647,7 @@ button {
         width: 100vw;
     }
 
+    /* first section */
     #filter {
         align-items: center;
     }
@@ -660,7 +662,7 @@ button {
     }
 
     .mobile {
-        display: block;
+        display: flex;
     }
 
     #filterContainer {
@@ -676,6 +678,8 @@ button {
         padding: 20px;
     }
 
+    /* second section */
+
     .accomodation-city__popular, .accomodation-city {
         border-radius: 0;
     }
@@ -689,6 +693,8 @@ button {
         max-width: 400px;
         height: 200px;
     }
+
+    /* third section */
 
     .landmarks-city {
         flex-direction: column;
@@ -715,6 +721,8 @@ button {
     .landmarks-city .two-items-block {
         width: 100%;
     }
+
+    /* footer */
 
     footer {
         height: fit-content;
