@@ -100,38 +100,55 @@ section {
     margin: 30px 0;
 }
 
-#filter .search i {
+#filter .search .location-icon{
+    position: absolute;
     left: 0;
     border-radius: 20px 0 0 20px;
     width: 50px;
     height: 100%;
-    background-color: #F2F2F2;
 }
 
 #filter .search form {
-    position: absolute;
-    left: 50px;
+    position: relative;
+    margin-left: 50px;
     width: 100%;
     max-width: 450px;
     height: 100%;
 }
 
-#filter .search input {
+#filter .search .search-area {
     height: 100%;
-    width: 75%;
     padding-left: 20px;
     border: 1px solid #F2F2F2;
-
 }
 
-#filter .search button {
+#filter .desktop-tablet .search-area {
+    width: 70%;
+}
+
+#filter .mobile .search-area {
+    padding-left: 10px;
+    padding-right: 30px;
+    width: 85%;
+}
+
+#filter .search form .submit-button {
     position: absolute;
     right: 0;
-    border-radius: 0 20px 20px 0;
     height: 100%;
-    width: 120px;
     font-weight: 600;
     font-size: 17px;
+    border: none;
+}
+
+#filter .desktop-tablet form .submit-button {
+    width: 30%;
+    border-radius: 0 20px 20px 0;
+}
+
+#filter .mobile form .submit-button {
+    width: 20%;
+    border-radius: 20px;
 }
 
 /* make the search bar appear or disappear dipending on the media screen */
@@ -184,27 +201,6 @@ section {
     flex-wrap: wrap;
 }
 
-.filter-btn span{
-    padding-left: 40px;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-/* animations */
-
-.filter-btn {
-    transform: scale(1);
-    background-color: transparent;
-    transition: transform 200ms, background-color 250ms;
-}
-
-.filter-btn:hover {
-    transform: scale(1.1); /* to be changed when a tags are added */
-    background-color: #DEEBFF;
-    color: #0065FC;
-}
-
-
 
 /* first section -- info disclaimer */
 
@@ -252,11 +248,6 @@ margin-bottom: 20px;
     justify-content: space-evenly;
     margin: 15px 0 15px 0;
 }
-/* 
-.location-cards a{
-    display: flex;
-    width: 100%;
-} */
 
 .location-info {
     margin-left: 20px;
@@ -291,13 +282,8 @@ margin-bottom: 20px;
     background-position: 0% 50%;
 }
 
-.accomodation-city__popular span {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.accomodation-city__popular .location:not(:last-child) {
-    margin-bottom: 30px;
+.accomodation-city__popular .location {
+    margin-bottom: 20px;
 }
 
 .accomodation-city__popular .location-info {
@@ -319,6 +305,7 @@ margin-bottom: 20px;
 /* third section */
 
 #landmarks {
+    position: relative;
     width: 100%;
     height: fit-content;
 }
@@ -330,6 +317,7 @@ margin-bottom: 20px;
 }
 
 .landmarks-city .card{
+    position: relative;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -401,6 +389,35 @@ footer ul {
     padding: 0;
 }
 
+
+/******** animations ********/
+
+#filter .desktop-tablet form .submit-button:active {
+    background-color: #66a3ff;
+    color: #111;
+}
+
+.filter-btn {
+    transform: scale(1);
+    background-color: transparent;
+    transition: transform 200ms, background-color 250ms;
+}
+
+.filter-btn:hover {
+    transform: scale(1.1);
+    background-color: #DEEBFF;
+    color: #0065FC;
+}
+
+a{
+    transform: scale(1);
+    transition: all 250ms;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
 /******** utilities ********/ 
 
 .d-flex {
@@ -415,12 +432,12 @@ footer ul {
     justify-content: space-around;
 }
 
-.X-centered {
+.main-axis-center {
     display: flex;
     justify-content: center;
 }
 
-.Y-centered {
+.cross-axis-center {
     display: flex;
     align-items: center;
 }
@@ -447,16 +464,6 @@ h3 {
 p{
     font-size: 14px;
     font-weight: 500;
-}
-
-a{
-    transform: scale(1);
-    transition: all 250ms;
-}
-
-a:hover {
-    /* transform: scale(1.1); */
-    transform: translateY(-10%);
 }
 
 /* colors */
@@ -578,10 +585,6 @@ button {
         margin-bottom: 0px;
     }
 
-    .mobile {
-        display: none;
-    }
-
     /* second section */
 
     #accomodation {
@@ -599,6 +602,10 @@ button {
         width: 100%;
         min-width: 320px;
         justify-content: space-evenly;
+    }
+
+    .accomodation-city .location-info {
+        align-items: flex-start;
     }
 
     .accomodation-city__popular {
@@ -626,7 +633,7 @@ button {
         width: 50%;
     }
 
-    /* thrid section */
+    /* third section */
     
     .landmarks-city .three-items-block {
         width: 100%;
@@ -635,14 +642,19 @@ button {
 
 /* on screen 768px or smaller */
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
 
     body {
         justify-content: center;
         align-items: center;
     }
+
     h1, h2, h3, p, .hotel-rating  {
         text-align: center;
+    }
+
+    a {
+        width: 100%;
     }
 
     .container {
@@ -656,6 +668,7 @@ button {
     
     section {
         width: 100vw;
+        padding: 0 20px;
     }
 
     /* first section */
@@ -665,14 +678,14 @@ button {
 
     #filter .search {
         margin: 20px auto;
-        left: 20px;
+        min-width: 300px;
     }
 
-    .desktop-tablet {
+    #filter .desktop-tablet {
         display: none;
     }
 
-    .mobile {
+    #filter .mobile {
         display: flex;
     }
 
@@ -685,20 +698,24 @@ button {
         margin-left: 20px;
     }
 
-    section:not(:nth-child(3)) {
-        padding: 20px;
-    }
-
     /* second section */
 
     .accomodation-city__popular, .accomodation-city {
         border-radius: 0;
     }
 
+    .accomodation-city__popular {
+        margin: 0;
+    }
+
     .accomodation-city {
         background-color: #fff;
     }
   
+    .location {
+        margin: 10px auto;
+    }
+
     .accomodation-city .location {
         width: 100%;
         max-width: 400px;
@@ -716,17 +733,13 @@ button {
         width: 100%;
         max-width: 600px;
         flex-wrap: wrap;
-        margin-bottom: 30px;
+        margin-bottom: 0;
     }
 
     .landmarks-city .three-items-block .card {
         width: 100%;
         height: 200px;
-        margin-right: 0px;
-    }
-
-    .landmarks-city .three-items-block .card:not(:last-child) {
-        margin-bottom: 30px;
+        margin: 0 0 20px 0;
     }
 
     .landmarks-city .two-items-block {
@@ -744,10 +757,6 @@ button {
         flex-direction: column;
         text-align: left;
         align-items: baseline;
-    }
-
-    .footer-section {
-        margin-bottom: 20px;
     }
 
     .footer-title {
