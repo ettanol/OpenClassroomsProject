@@ -465,6 +465,12 @@ footer ul {
 
 .navbar a:hover +.bar {
     background-color: #0065FC;
+    transform: scale(1);
+}
+
+.bar {
+    transform: scale(0);
+    transition: all 200ms;
 }
 
 #filter .desktop-tablet form .submit-button:active {
