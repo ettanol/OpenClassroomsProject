@@ -21,21 +21,31 @@
 <body class="bg-white">
     <div class="container">
         <header class="d-flex space-between">
-            <img src="./images/logo/Booki.png" alt="logo" id="logo">
+            <a href="/index.html" class="home">
+                <img src="./images/logo/Booki.png" alt="logo" id="logo" fetchpriority="high">
+            </a>
             <nav class="navbar">
-                <ul class="d-flex main-axis-center">
-                    <li><a href="#accomodation" class="highlighted">Hébergements</a><div class="bar main-axis-center bg-primary"></div></li>
-                    <li><a href="#landmarks">Activités</a></li>
+                <ul class="d-flex space-around">
+                    <li class="d-flex column first-nav">
+                        <a href="#accomodation">Hébergements</a>
+                        <div class="bar main-axis-center"></div>
+                    </li>
+                    <li class="d-flex column second-nav">
+                        <a href="#landmarks">Activités</a>
+                        <div class="bar main-axis-center"></div>
+                    </li>
                 </ul>
             </nav>
         </header>
 
         <!-- filter section -->
         <section id="filter" class="d-flex column">
-            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-            <p>En plein centre ville ou en pleine nature</p>
+            <div class="filter-description">
+                <h1 class="filter-title">Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+            </div>
             <div class="search card d-flex desktop-tablet">
-                <i class="fa-solid fa-location-dot location-icon main-axis-center cross-axis-center bg-discreet"></i>
+                <i class="fa-solid fa-location-dot location-icon main-axis-center cross-axis-center bg-discreet" fetchpriority="high"></i>
                 <form action="#">
                     <label for="city"></label>
                     <input type="search" placeholder="Ville..." name="search" class="search-area">
@@ -49,16 +59,16 @@
                 <form action="#" method="get">
                     <label for="city"></label>
                     <input type="text" placeholder="Ville..." name="search" class="search-area">
-                    <button class="submit-button  bg-primary"><i class="fa-solid fa-magnifying-glass magnifying-glass-icon f-white main-axis-center cross-axis-center"></i></button>
+                    <button class="submit-button  bg-primary"><i class="fa-solid fa-magnifying-glass magnifying-glass-icon f-white main-axis-center cross-axis-center" fetchpriority="high"></i></button>
                 </form>
             </div>
             <div class="d-flex" id="filterContainer">
-                <p><h2 class="filter-container-title">Filtres</h2></p>
+                <p><h2 class="filter-container-title cross-axis-center">Filtres</h2></p>
                 <div id="filter-buttons" class="d-flex">
-                    <button class="filter-btn active d-flex bg-transparent" onclick="filterSelection('price')"><i class="fa-solid fa-money-bill-1-wave bg-secondary highlighted main-axis-center cross-axis-center"></i><h2 >Economique</h2></button>
-                    <button class="filter-btn d-flex bg-transparent" onclick="filterSelection('family')"><i class="fa-solid fa-person bg-secondary highlighted main-axis-center cross-axis-center"></i><h2>Familial</h2></button>
-                    <button class="filter-btn d-flex bg-transparent" onclick="filterSelection('romantic')"><i class="fa-solid fa-heart bg-secondary highlighted main-axis-center cross-axis-center"></i><h2>Romantique</h2></button>
-                    <button class="filter-btn d-flex bg-transparent" onclick="filterSelection('animals')"><i class="fa-solid fa-dog bg-secondary highlighted main-axis-center cross-axis-center"></i><h2>Animaux autorisés</h2></button>
+                    <button class="filter-btn d-flex bg-transparent"><i class="fa-solid fa-money-bill-1-wave bg-secondary highlighted main-axis-center cross-axis-center" fetchpriority="high"></i><h2 >Economique</h2></button>
+                    <button class="filter-btn d-flex bg-transparent"><i class="fa-solid fa-person bg-secondary highlighted main-axis-center cross-axis-center" fetchpriority="high"></i><h2>Familial</h2></button>
+                    <button class="filter-btn d-flex bg-transparent"><i class="fa-solid fa-heart bg-secondary highlighted main-axis-center cross-axis-center" fetchpriority="high"></i><h2>Romantique</h2></button>
+                    <button class="filter-btn d-flex bg-transparent"><i class="fa-solid fa-dog bg-secondary highlighted main-axis-center cross-axis-center" fetchpriority="high"></i><h2>Animaux autorisés</h2></button>
                 </div>
             </div>
             <div class="info d-flex">
@@ -171,7 +181,7 @@
                         </div>
                     </a>
                 </div>
-                <button class="expand-button"><a href="#">Afficher plus</a></button>
+                <a class="expand-button">Afficher plus</a>
             </div>
 
             <!--  aside with popular demands -->
@@ -181,8 +191,7 @@
                     <i class="fa-solid fa-chart-line-up"></i>
                 </div> 
                 <div class="location-cards d-flex column main-axis-center">
-                    <a href="#">
-                        <div class="location card shadow d-flex bg-white">
+                        <a class="location card shadow d-flex bg-white">
                             <div class="box-image" style="background-image: url('./images/hebergements/3_medium/Marseille_le-soleil-du-matin.jpg')"></div>
                             <div class="location-info d-flex column">
                                 <h2 class="hotel-name">Hôtel Le soleil du matin</h2>
@@ -195,10 +204,8 @@
                                     <i class="fa-solid fa-star highlighted"></i>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="location card shadow d-flex bg-white">
+                        </a>
+                        <a class="location card shadow d-flex bg-white">
                             <div class="box-image" style="background-image: url('./images/hebergements/3_medium/Marseille_au-coeur-de-leau.jpg')"></div>
                             <div class="location-info d-flex column">
                                 <h2 class="hotel-name">Au coeur de l'eau Chambres d'hôtes</h2>
@@ -211,10 +218,8 @@
                                     <i class="fa-solid fa-star discreet"></i>
                                 </div>
                             </div>
-                        </div>
                     </a>
-                    <a href="#">
-                        <div class="location card shadow d-flex bg-white">
+                        <a class="location card shadow d-flex bg-white">
                             <div class="box-image" style="background-image: url('./images/hebergements/3_medium/Marseille_tout-blanc-et-bleu.jpg');     background-position: 50% 40%;"></div>
                             <div class="location-info d-flex column">
                                 <h2 class="hotel-name">Hôtel Tout bleu et Blanc</h2>
@@ -227,7 +232,6 @@
                                     <i class="fa-solid fa-star discreet"></i>
                                 </div>
                             </div>
-                        </div>
                     </a>
                 </div>
             </aside>
@@ -239,7 +243,7 @@
             <div class="landmarks-city d-flex space-between">
                 <div class="three-items-block d-flex">
                     <a class="card shadow bg-white">
-                        <div class="box-image" style="background-image: url(./images/activites/3_medium/Marseille_vieux-port.jpg); background-position: 30% 50%;">
+                        <div class="box-image" style="background-image: url(./images/activites/3_medium/Marseille_vieux-port.jpg); background-position: 56% 30%;">
                         </div>
                         <div class="box-text cross-axis-center">
                             <h2 class="location-info">Vieux Port</h2>
@@ -247,14 +251,14 @@
                     </a>
                     <div class="two-items-block d-flex column">
                         <a class="card landscape shadow bg-white">
-                            <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_fort-de-Pomègues.jpg);">
+                            <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_fort-de-Pomègues.jpg); background-position: 70% 50%;">
                             </div>
                             <div class="box-text cross-axis-center">
                                 <h2 class="location-info">Fort De Pomègues</h2>
                             </div>
                         </a>
                         <a class="card landscape shadow bg-white">
-                            <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_iles_du_frioul.jpg);">
+                            <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_iles_du_frioul.jpg); background-position: 0% 0%;">
                             </div>
                             <div class="box-text cross-axis-center">
                                 <h2 class="location-info">Iles du Frioul</h2>
@@ -264,22 +268,22 @@
                 </div>
                 <div class="three-items-block d-flex">
                     <a class="card shadow bg-white">
-                        <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_calanques.jpg)">
+                        <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_calanques.jpg);background-position: 60% 50%;">
                         </div>
-                        <div class="box-text scross-axis-center">
+                        <div class="box-text cross-axis-center">
                             <h2 class="location-info">Parc national des Calanques</h2>
                         </div>
                     </a>
                     <div class="two-items-block d-flex column">
                         <a class="card landscape shadow bg-white">
-                            <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_Notre-dame-de-la-garde.jpg);">
+                            <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_Notre-dame-de-la-garde.jpg); background-position: 40% 0%;">
                             </div>
                             <div class="box-text cross-axis-center">
                                 <h2 class="location-info">Notre-Dame-de-la-Garde</h2>
                             </div>
                         </a>
                         <a class="card landscape shadow bg-white">
-                            <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_parc_longchamp.jpg);">
+                            <div class="box-image " style="background-image: url(./images/activites/3_medium/Marseille_parc_longchamp.jpg); background-position: 0% 30%;">
                             </div>
                             <div class="box-text cross-axis-center">
                                 <h2 class="location-info">Parc Longchamp</h2>
