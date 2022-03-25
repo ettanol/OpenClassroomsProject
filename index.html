@@ -22,7 +22,7 @@
     <div class="container">
         <header class="d-flex space-between">
             <a href="/index.html" class="home">
-                <img src="./images/logo/Booki.png" alt="logo" id="logo" fetchpriority="high">
+                <img src="./images/logo/Booki.png" alt="logo" id="logo">
             </a>
             <nav class="navbar">
                 <ul class="d-flex space-around">
@@ -45,10 +45,10 @@
                 <p>En plein centre ville ou en pleine nature</p>
             </div>
             <div class="search card d-flex desktop-tablet">
-                <i class="fa-solid fa-location-dot location-icon main-axis-center cross-axis-center bg-discreet" fetchpriority="high"></i>
+                <i class="fa-solid fa-location-dot location-icon main-axis-center cross-axis-center bg-discreet"></i>
                 <form action="#">
                     <label for="city"></label>
-                    <input type="search" placeholder="Ville..." name="search" class="search-area">
+                    <input type="search" placeholder="Ville..." name="search" class="search-area" id="city">
                     <input type="submit" class="submit-button bg-primary f-white" value="Rechercher">
                 </form>
             </div>
@@ -58,17 +58,17 @@
                 <i class="fa-solid fa-location-dot location-icon main-axis-center cross-axis-center bg-discreet"></i>
                 <form action="#" method="get">
                     <label for="city"></label>
-                    <input type="text" placeholder="Ville..." name="search" class="search-area">
-                    <button class="submit-button bg-primary"><i class="fa-solid fa-magnifying-glass magnifying-glass-icon f-white main-axis-center cross-axis-center" fetchpriority="high"></i></button>
+                    <input type="text" placeholder="Ville..." name="search" class="search-area" id="city">
+                    <button class="submit-button bg-primary"><i class="fa-solid fa-magnifying-glass magnifying-glass-icon f-white main-axis-center cross-axis-center"></i></button>
                 </form>
             </div>
             <div class="d-flex" id="filterContainer">
-                <p><h2 class="filter-container-title cross-axis-center">Filtres</h2></p>
+                <h2 class="filter-container-title cross-axis-center">Filtres</h2>
                 <div id="filter-buttons" class="d-flex">
-                    <button class="filter-btn d-flex bg-transparent"><i class="fa-solid fa-money-bill-1-wave bg-secondary highlighted main-axis-center cross-axis-center" fetchpriority="high"></i><h2 >Economique</h2></button>
-                    <button class="filter-btn d-flex bg-transparent"><i class="fa-solid fa-person bg-secondary highlighted main-axis-center cross-axis-center" fetchpriority="high"></i><h2>Familial</h2></button>
-                    <button class="filter-btn d-flex bg-transparent"><i class="fa-solid fa-heart bg-secondary highlighted main-axis-center cross-axis-center" fetchpriority="high"></i><h2>Romantique</h2></button>
-                    <button class="filter-btn d-flex bg-transparent"><i class="fa-solid fa-dog bg-secondary highlighted main-axis-center cross-axis-center" fetchpriority="high"></i><h2>Animaux autorisés</h2></button>
+                    <button class="filter-btn d-flex bg-transparent"><i class="fa-solid fa-money-bill-1-wave bg-secondary highlighted main-axis-center cross-axis-center"></i>Economique</button>
+                    <button class="filter-btn d-flex bg-transparent"><i class="fa-solid fa-person bg-secondary highlighted main-axis-center cross-axis-center"></i>Familial</button>
+                    <button class="filter-btn d-flex bg-transparent"><i class="fa-solid fa-heart bg-secondary highlighted main-axis-center cross-axis-center"></i>Romantique</button>
+                    <button class="filter-btn d-flex bg-transparent"><i class="fa-solid fa-dog bg-secondary highlighted main-axis-center cross-axis-center"></i>Animaux autorisés</button>
                 </div>
             </div>
             <div class="info d-flex">
@@ -187,7 +187,7 @@
             <!--  aside with popular demands -->
             <aside class="accomodation-city__popular d-flex column card bg-discreet">
                 <div class="d-flex">
-                    <h1>Les plus populaires</h1>
+                    <h1 class="card-info">Les plus populaires</h1>
                     <i class="fa-solid fa-chart-line-up"></i>
                 </div> 
                 <div class="location-cards d-flex column main-axis-center">
